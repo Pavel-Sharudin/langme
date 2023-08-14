@@ -734,6 +734,7 @@ a {
   font-weight: bold;
 }
 .main-anruf-wrapper_formBox .form .inputBox {
+  display: flex;
   padding-top: 10px;
 }
 .main-anruf-wrapper_formBox .form .inputBox input {
