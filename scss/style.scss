@@ -52,13 +52,13 @@ $color11: #232323;
 
 // Sizes
 
-$size-sm: 14px;
-$size-m: 18px;
-$size-md: 20px;
-$size-cd: 28px;
-$size-x: 40px;
-$size-xd: 50px;
-$size-xxl: 64px;
+$size-sm: rem(14px);
+$size-m: rem(18px);
+$size-md: rem(20px);
+$size-cd: rem(28px);
+$size-x: rem(40px);
+$size-xd: rem(50px);
+$size-xxl: rem(64px);
 
 //Common
 
@@ -381,6 +381,8 @@ html {
 
     // Laptop
 
+
+
     @media (max-width: $screen-lg-min) {
 
         &-present {
@@ -434,6 +436,15 @@ html {
                 &_head {
                     width: 60%;
                 }
+            }
+        }
+    }
+
+    @media (max-width: $screen-sm-min) {
+        
+        &-navBar {
+            &_nav {
+                display: none;
             }
         }
     }
@@ -628,9 +639,10 @@ html {
             }
 
             &-title {
+                flex-direction: column;
                 
                 &_h1 {
-                    width: 60%;
+                    width: 100%;
                 }
             }
         }
@@ -648,9 +660,23 @@ html {
             }
 
             &-title {
+                margin-top: 40px;
                 
                 &_h1 {
-                    width: 60%;
+                    padding: 20px 0;
+                    width: 100%;
+                }
+            }
+        }
+
+        @media (max-width: $screen-sm-min) {
+            &-wrapper {
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                &_card {
+                    width: 85%;
+                    height: 30%;
                 }
             }
         }
@@ -771,6 +797,31 @@ html {
 
                 &_table {
                     width: 55%;
+                }
+            }
+        }
+
+        @media (max-width: $screen-md-min) {
+            height: auto;
+
+            &-wrapper {
+
+                &_presentBl {
+                    padding-bottom: 20px;
+                }
+
+                &_table {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &__block {
+                        width: 80%;
+                        align-items: center;
+                        text-align: center;
+                        padding: 20px 0;
+                    }
                 }
             }
         }
@@ -938,8 +989,8 @@ html {
                 img {
                     position: absolute;
                     bottom: 0;
-                    width: 400px;
-                    height: 450px;
+                    width: 70%;
+                    height: 90%;
                 }
             }
 
@@ -984,6 +1035,14 @@ html {
             &-block {
                 height: 950px;    
                 flex-direction: column;
+
+                .image {
+                    width: 100%;
+
+                    // img {
+                    //     width: 85%;
+                    // }
+                }
                 
                 &_txt {
                     width: 80%;
@@ -993,6 +1052,8 @@ html {
 
         @media (min-width: $screen-lg-max) {
             &-block {
+
+
                 &_txt {
                     width: 40%;
                 }
@@ -1055,10 +1116,11 @@ html {
                     .blc_tlt {
                         display: flex;
                         justify-content: space-between;
+                        width: 100%;
 
                         img {
-                            width: 190px;
-                            height: 30px;
+                            height: 20%;
+                            width: 30%;
                         }
 
                         .infos {
@@ -1110,6 +1172,24 @@ html {
 
                 &--slider {
                     width: 100%;
+                }
+            }
+        }
+
+        @media (max-width: $screen-sm-min) {
+            &-wrapper {
+
+                &--slider {
+                    &__blc {
+                        
+                        .blc_tlt {
+                            flex-direction: column;
+
+                            img {
+                                width: 35%;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1230,9 +1310,17 @@ html {
                 }
             }
 
-            .img {
-                width: 350px;
-                height: 400px;
+            .image {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: end;
+
+                .img {
+                    width: 50%;
+                    height: 75%;
+                }
             }
         }
 
@@ -1241,9 +1329,14 @@ html {
                 height: 950px;
                 flex-direction: column;
 
-                .img {
-                    display: flex;
+                .image {
+                    width: 100%;
+                    height: 50%;
                     order: -1;
+
+                    .img {
+                        width: 75%;
+                    }
                 }
 
                 &_formBox {
@@ -1614,6 +1707,16 @@ html {
 
             &-wrapper {
                 grid-template-columns: 50% 50%;
+            }
+        }
+    }
+
+    @media (max-width: $screen-sm-min) {
+        &-top {
+            height: 100vh;
+
+            &-wrapper {
+                grid-template-columns: 100%;
             }
         }
     }
