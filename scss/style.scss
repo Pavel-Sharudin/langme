@@ -20,6 +20,19 @@ a {
     border-radius: 8px;
 }
 
+//***Functions***
+
+// @function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+//     $k: ($f-max - $f-min)/($v-max - $v-min);
+//     $b: $f-min - $k * $v-min;
+  
+//     $b: $b * 1px;
+  
+//     @return math.div( #{$k} * 100vw + #{$b} );
+// }
+
+//***/Functions**
+
 // Adaptiv
 
 $screen-sm-min: 576px;
@@ -52,13 +65,13 @@ $color11: #232323;
 
 // Sizes
 
-$size-sm: rem(14px);
-$size-m: rem(18px);
-$size-md: rem(20px);
-$size-cd: rem(28px);
-$size-x: rem(40px);
-$size-xd: rem(50px);
-$size-xxl: rem(64px);
+$size-sm: 14px;
+$size-m: 18px;
+$size-md: 20px;
+$size-cd: 28px;
+$size-x: 40px;
+$size-xd: 50px;
+$size-xxl: 64px;
 
 //Common
 
@@ -441,6 +454,40 @@ html {
     }
 
     @media (max-width: $screen-sm-min) {
+
+        &-present {
+            
+            &-info {
+                padding: 0;
+
+                &_head { 
+                    width: 80%;
+
+                    &__h1 {
+                        font-size: $size-cd;
+                    }
+                    &__txt {
+                        width: 100%;
+                        font-size: $size-m;
+                    }
+
+                    
+                    &__button {
+                        flex-direction: column;
+                        align-items: start;
+                        padding-top: 15px;
+
+                        .play {
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+
+            &-image {
+                padding: 0;
+            }
+        }
         
         &-navBar {
             &_nav {
@@ -670,6 +717,16 @@ html {
         }
 
         @media (max-width: $screen-sm-min) {
+
+            &-title {
+                margin-top: 0;
+                margin-bottom: 10px;
+
+                    &_h1 {
+                        font-size: $size-cd;
+                    }
+            }
+
             &-wrapper {
                 flex-direction: column;
                 justify-content: space-evenly;
@@ -677,6 +734,11 @@ html {
                 &_card {
                     width: 85%;
                     height: 30%;
+                     
+                    .wrapper .img {
+                        width: 30px;
+                        height: 30px;
+                    }
                 }
             }
         }
@@ -825,6 +887,27 @@ html {
                 }
             }
         }
+
+        @media (max-width: $screen-sm-min) {
+
+            &-wrapper {
+
+                &_presentBl {
+                    
+                    .title {
+                        font-size: $size-cd;
+                    }
+                    
+                    .text {
+                        font-size: $size-m;
+                    }
+                    
+                    .svg {
+                        width: 70%;
+                    }
+                }
+            }
+        }        
     }
 
     &-intr {
@@ -945,6 +1028,12 @@ html {
                     }
                 }
             }
+
+            @media (max-width: $screen-sm-min) {
+                .titleBg {
+                    font-size: $size-cd;
+                }
+            }
         }
     }
 
@@ -1046,6 +1135,7 @@ html {
                 
                 &_txt {
                     width: 80%;
+                    margin: 0;
                 }
             }
         }
@@ -1056,6 +1146,28 @@ html {
 
                 &_txt {
                     width: 40%;
+                }
+            }
+        }
+
+        @media (max-width: $screen-sm-min) {
+            &-block {
+                height: 100vh;
+
+                .image {
+                    img {
+                        width: 90%;
+                    }
+                }
+
+                &_txt {
+                    .block {
+                        padding: 0 0 0 15px ;
+                    }
+
+                    .title {
+                        font-size: $size-cd;
+                    }
                 }
             }
         }
@@ -1177,6 +1289,17 @@ html {
         }
 
         @media (max-width: $screen-sm-min) {
+            
+            &-tltBlock {
+                &_title {
+                    font-size: $size-cd;
+                }
+
+                a {
+                    width: 40%;
+                }
+            }
+
             &-wrapper {
 
                 &--slider {
@@ -1344,6 +1467,19 @@ html {
                 }
             }
         }
+
+        @media (max-width: $screen-sm-min) {
+            &-wrapper {
+                height: 100vh;
+
+                &_formBox {
+                    
+                    .title {
+                        font-size: $size-cd;
+                    }
+                }
+            }
+        }
     }
 
     &-news {
@@ -1471,6 +1607,24 @@ html {
                 
                 &--list {
                     flex-direction: column;
+                }
+            }
+        }
+
+        @media (max-width: $screen-sm-min) {
+            &-wrapper {
+
+                &--tltBlc {
+
+                    &_title {
+                        font-size: $size-cd;
+                    }
+                }
+                &--list {
+                        
+                    &_blc {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -1612,6 +1766,14 @@ html {
 
             &-acrd {
                 width: 100%;
+            }
+        }
+
+        @media (max-width: $screen-sm-min) {
+            &-tltBlc {
+                &_title {
+                    font-size: $size-cd;
+                }
             }
         }
     }
